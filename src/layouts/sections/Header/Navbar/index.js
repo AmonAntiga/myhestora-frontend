@@ -30,7 +30,7 @@ import {
   navbarIconButton,
   navbarDesktopMenu,
   navbarMobileMenu,
-} from "layouts/sections/Header/Navbars/DashboardNavbar/styles";
+} from "layouts/sections/Header/Navbar/styles";
 
 // Material Dashboard 2 PRO React context
 import {

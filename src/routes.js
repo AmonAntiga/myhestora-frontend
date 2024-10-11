@@ -146,162 +146,77 @@ const routes = [
       },
     ],
   },
+  { type: "divider", key: "divider-1" },
+  { type: "title", title: "Support", key: "title-support" },
   {
     type: "collapse",
-    name: "Pages",
-    key: "pages",
-    icon: <Icon fontSize="medium">image</Icon>,
+    name: "Guides",
+    key: "guide-doc",
+    icon: <Icon fontSize="medium">description</Icon>,
     collapse: [
       {
-        name: "Profile",
-        key: "profile",
+        name: "Getting Started",
+        key: "getting-started-doc",
         collapse: [
           {
-            name: "Profile Overview",
-            key: "profile-overview",
-            route: "/pages/profile/profile-overview",
+            name: "Overview",
+            key: "overview-doc",
             component: "",
           },
           {
-            name: "All Projects",
-            key: "all-projects",
-            route: "/pages/profile/all-projects",
+            name: "License",
+            key: "license-doc",
+            component: "",
+          },
+          {
+            name: "Quick Start",
+            key: "quick-start-doc",
             component: "",
           },
         ],
       },
       {
-        name: "Users",
-        key: "users",
+        name: "Services",
+        key: "services-doc",
         collapse: [
           {
-            name: "New User",
-            key: "new-user",
-            route: "/pages/users/new-user",
-            component: "",
-          },
-        ],
-      },
-      {
-        name: "Account",
-        key: "account",
-        collapse: [
-          {
-            name: "Settings",
-            key: "settings",
-            route: "/pages/account/settings",
+            name: "EternaVault",
+            key: "eternavault-doc",
             component: "",
           },
           {
-            name: "Billing",
-            key: "billing",
-            route: "/pages/account/billing",
+            name: "SocialMantle",
+            key: "socialmantle-doc",
             component: "",
           },
           {
-            name: "Invoice",
-            key: "invoice",
-            route: "/pages/account/invoice",
-            component: "",
-          },
-        ],
-      },
-      {
-        name: "Projects",
-        key: "projects",
-        collapse: [
-          {
-            name: "Timeline",
-            key: "timeline",
-            route: "/pages/projects/timeline",
-            component: "",
-          },
-        ],
-      },
-      {
-        name: "Pricing Page",
-        key: "pricing-page",
-        route: "/pages/pricing-page",
-        component: "",
-      },
-    ],
-  },
-  {
-    type: "collapse",
-    name: "Applications",
-    key: "applications",
-    icon: <Icon fontSize="medium">apps</Icon>,
-    collapse: [
-      {
-        name: "Kanban",
-        key: "kanban",
-        route: "/applications/kanban",
-        component: "",
-      },
-      {
-        name: "Wizard",
-        key: "wizard",
-        route: "/applications/wizard",
-        component: "",
-      },
-      {
-        name: "Data Tables",
-        key: "data-tables",
-        route: "/applications/data-tables",
-        component: "",
-      },
-    ],
-  },
-  {
-    type: "collapse",
-    name: "Ecommerce",
-    key: "ecommerce",
-    icon: <Icon fontSize="medium">shopping_basket</Icon>,
-    collapse: [
-      {
-        name: "Products",
-        key: "products",
-        collapse: [
-          {
-            name: "New Product",
-            key: "new-product",
-            route: "/ecommerce/products/new-product",
-            component: "",
-          },
-          {
-            name: "Edit Product",
-            key: "edit-product",
-            route: "/ecommerce/products/edit-product",
-            component: "",
-          },
-          {
-            name: "Product Page",
-            key: "product-page",
-            route: "/ecommerce/products/product-page",
-            component: "",
-          },
-        ],
-      },
-      {
-        name: "Orders",
-        key: "orders",
-        collapse: [
-          {
-            name: "Order List",
-            key: "order-list",
-            route: "/ecommerce/orders/order-list",
-            component: "",
-          },
-          {
-            name: "Order Details",
-            key: "order-details",
-            route: "/ecommerce/orders/order-details",
+            name: "AegisFunds",
+            key: "aegisfunds-doc",
             component: "",
           },
         ],
       },
     ],
   },
+  {
+    type: "collapse",
+    noCollapse: true,
+    name: "Change Log",
+    key: "changelog",
+    route: "/changelog",
+    component: "",
+    icon: <Icon fontSize="medium">receipt_long</Icon>,
+  },
+  {
+    type: "collapse",
+    noCollapse: true,
+    name: "Feedback",
+    key: "feedback",
+    route: "/feedback",
+    component: "",
+    icon: <Icon fontSize="medium">feedback</Icon>,
+  },
+  { type: "divider", key: "divider-1" },
   {
     type: "collapse",
     name: "Authentication",
@@ -309,132 +224,24 @@ const routes = [
     icon: <Icon fontSize="medium">content_paste</Icon>,
     collapse: [
       {
-        name: "Sign In",
-        key: "sign-in",
-        collapse: [
-          {
-            name: "Basic",
-            key: "basic",
-            route: "/authentication/sign-in/basic",
-            component: "",
-          },
-          {
-            name: "Cover",
-            key: "cover",
-            route: "/authentication/sign-in/cover",
-            component: "",
-          },
-          {
-            name: "Illustration",
-            key: "illustration",
-            route: "/authentication/sign-in/illustration",
-            component: "",
-          },
-        ],
+        name: "Login",
+        key: "login",
+        route: "/login",
+        component: "",
       },
       {
-        name: "Sign Up",
-        key: "sign-up",
-        collapse: [
-          {
-            name: "Cover",
-            key: "cover",
-            route: "/authentication/sign-up/cover",
-            component: "",
-          },
-        ],
+        name: "Register",
+        key: "register",
+        route: "/register",
+        component: "",
       },
       {
         name: "Reset Password",
         key: "reset-password",
-        collapse: [
-          {
-            name: "Cover",
-            key: "cover",
-            route: "/authentication/reset-password/cover",
-            component: "",
-          },
-        ],
+        route: "/reset-password",
+        component: "",
       },
     ],
-  },
-  { type: "divider", key: "divider-1" },
-  { type: "title", title: "Docs", key: "title-docs" },
-  {
-    type: "collapse",
-    name: "Basic",
-    key: "basic",
-    icon: <Icon fontSize="medium">upcoming</Icon>,
-    collapse: [
-      {
-        name: "Getting Started",
-        key: "getting-started",
-        collapse: [
-          {
-            name: "Overview",
-            key: "overview",
-            href: "",
-          },
-          {
-            name: "License",
-            key: "license",
-            href: "",
-          },
-          {
-            name: "Quick Start",
-            key: "quick-start",
-            href: "",
-          },
-          {
-            name: "Build Tools",
-            key: "build-tools",
-            href: "",
-          },
-        ],
-      },
-      {
-        name: "Foundation",
-        key: "foundation",
-        collapse: [
-          {
-            name: "Colors",
-            key: "colors",
-            href: "",
-          },
-          {
-            name: "Grid",
-            key: "grid",
-            href: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    type: "collapse",
-    name: "Components",
-    key: "components",
-    icon: <Icon fontSize="medium">view_in_ar</Icon>,
-    collapse: [
-      {
-        name: "Alerts",
-        key: "alerts",
-        href: "",
-      },
-      {
-        name: "Avatar",
-        key: "avatar",
-        href: "",
-      },
-    ],
-  },
-  {
-    type: "collapse",
-    name: "Change Log",
-    key: "changelog",
-    href: "",
-    icon: <Icon fontSize="medium">receipt_long</Icon>,
-    noCollapse: true,
   },
 ];
 
