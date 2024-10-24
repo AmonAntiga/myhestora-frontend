@@ -20,6 +20,10 @@
   10. The `component` key is used to store the component of its route.
 */
 
+// Material Dashboard 2 PRO React layouts
+import Dashboard from "layouts/pages/Dashboard";
+import Login from "layouts/pages/Login";
+
 // Dashboard components
 import MDAvatar from "components/MDAvatar";
 
@@ -63,7 +67,7 @@ const routes = [
     name: "Dashboard",
     key: "dashboard",
     route: "/dashboard",
-    component: "",
+    component: <Dashboard />,
     icon: <Icon fontSize="medium">dashboard</Icon>,
   },
   { type: "divider", key: "divider-0" },
@@ -227,7 +231,7 @@ const routes = [
         name: "Login",
         key: "login",
         route: "/login",
-        component: "",
+        component: <Login />,
       },
       {
         name: "Register",

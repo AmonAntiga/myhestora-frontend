@@ -1,3 +1,18 @@
+/**
+=========================================================
+* Material Dashboard 2 PRO React - v2.2.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
+* Copyright 2024 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
 import { useState, useEffect, useMemo } from "react";
 
 // react-router components
@@ -8,26 +23,35 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
-// Dashboard components
+// Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
 
-// Dashboard contexts
-import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
+// Material Dashboard 2 PRO React examples
+import Sidenav from "examples/Sidenav";
+import Configurator from "examples/Configurator";
 
-// Dashboard Layout Sections
-import Sidenav from "layouts/sections/Sidenav";
-import Configurator from "layouts/sections/Configurator";
-
-// Dashboard themes
+// Material Dashboard 2 PRO React themes
 import theme from "assets/theme";
-import themeDark from "assets/theme-dark";
+import themeRTL from "assets/theme/theme-rtl";
 
-// Dashboard routes
+// Material Dashboard 2 PRO React Dark Mode themes
+import themeDark from "assets/theme-dark";
+import themeDarkRTL from "assets/theme-dark/theme-rtl";
+
+// RTL plugins
+import rtlPlugin from "stylis-plugin-rtl";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+
+// Material Dashboard 2 PRO React routes
 import routes from "routes";
 
+// Material Dashboard 2 PRO React contexts
+import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
+
 // Images
-import brandDark from "assets/images/Hestora_Black.png";
-import brandWhite from "assets/images/Hestora_White.png";
+import brandWhite from "assets/images/logo-ct.png";
+import brandDark from "assets/images/logo-ct-dark.png";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -42,7 +66,18 @@ export default function App() {
     darkMode,
   } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
+  const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
+
+  // Cache for the rtl
+  useMemo(() => {
+    const cacheRtl = createCache({
+      key: "rtl",
+      stylisPlugins: [rtlPlugin],
+    });
+
+    setRtlCache(cacheRtl);
+  }, []);
 
   // Open sidenav when mouse enter on mini sidenav
   const handleOnMouseEnter = () => {
@@ -111,7 +146,32 @@ export default function App() {
     </MDBox>
   );
 
-  return (
+  return direction === "rtl" ? (
+    <CacheProvider value={rtlCache}>
+      <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
+        <CssBaseline />
+        {layout === "dashboard" && (
+          <>
+            <Sidenav
+              color={sidenavColor}
+              brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
+              brandName="Material Dashboard PRO"
+              routes={routes}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}
+            />
+            <Configurator />
+            {configsButton}
+          </>
+        )}
+        {layout === "vr" && <Configurator />}
+        <Routes>
+          {getRoutes(routes)}
+          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+        </Routes>
+      </ThemeProvider>
+    </CacheProvider>
+  ) : (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       {layout === "dashboard" && (
@@ -119,7 +179,7 @@ export default function App() {
           <Sidenav
             color={sidenavColor}
             brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-            brandName="myHestora"
+            brandName="Material Dashboard PRO"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
@@ -128,11 +188,10 @@ export default function App() {
           {configsButton}
         </>
       )}
-      {/*Routes group. Inside here there is the main Body interface*/}
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
       </Routes>
     </ThemeProvider>
   );
