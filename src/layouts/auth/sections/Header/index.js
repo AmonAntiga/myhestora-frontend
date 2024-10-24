@@ -28,9 +28,11 @@ import DefaultNavbarMobile from "layouts/auth/sections/Header/Navbars/DefaultNav
 // Base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
+// Routes import
+import routes from "auth.header.routes";
+
 function Header({
   brand = "Hestora",
-  routes,
   transparent = false,
   light = false,
   action = false,
