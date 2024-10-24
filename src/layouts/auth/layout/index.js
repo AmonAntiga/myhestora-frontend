@@ -12,6 +12,13 @@ import MDBox from "components/MDBox";
 // Material Dashboard 2 PRO React context
 import { useMaterialUIController, setLayout } from "context";
 
+// Dashboard Layout Sections
+import Header from "layouts/auth/sections/Header";
+import Footer from "layouts/auth/sections/Footer";
+
+// Routes import
+import routes from "auth.header.routes";
+
 function PageLayout({ background, children }) {
   const [, dispatch] = useMaterialUIController();
   const { pathname } = useLocation();
@@ -28,7 +35,17 @@ function PageLayout({ background, children }) {
       bgColor={background}
       sx={{ overflowX: "hidden" }}
     >
+      <Header
+        routes={routes}
+        action={{
+          type: "external",
+          route: "",
+          label: "Access",
+        }}
+        sticky
+      />
       {children}
+      <Footer />
     </MDBox>
   );
 }
