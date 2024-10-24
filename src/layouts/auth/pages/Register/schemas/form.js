@@ -85,12 +85,30 @@ const form = {
       errorMsg: "Zip is required.",
       invalidMsg: "Zipcode is not valie (e.g. 70000).",
     },
-    /* Second Page */
+    /* Third Page */
     language: {
       name: "language",
       label: "Language",
       type: "text",
       errorMsg: "Language is required.",
+    },
+    opt_mark: {
+      name: "opt_mark",
+      label: "MArketing Opt In",
+      type: "text",
+      errorMsg: "Opt In is required.",
+    },
+    opt_news: {
+      name: "opt_news",
+      label: "Newsletter Opt In",
+      type: "text",
+      errorMsg: "Opt In is required.",
+    },
+    opt_push: {
+      name: "opt_push",
+      label: "Push Notification Opt In",
+      type: "text",
+      errorMsg: "Opt In is required.",
     },
   },
 };

@@ -1,23 +1,9 @@
-/**
-=========================================================
-* Material Dashboard 2 PRO React - v2.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-type is a library for typechecking of props
 import PropTypes from "prop-types";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
+import Switch from "@mui/material/Switch";
 
 // Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
@@ -48,6 +34,41 @@ function Preferences({ formData }) {
               error={errors.language && touched.language}
               success={languageV.length > 0 && !errors.language}
             />
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={4}>
+            <Switch />
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              color="text"
+              sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+            >
+              &nbsp;&nbsp;Marketing Offers
+            </MDTypography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Switch />
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              color="text"
+              sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+            >
+              &nbsp;&nbsp;Newsletters
+            </MDTypography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Switch />
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              color="text"
+              sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+            >
+              &nbsp;&nbsp;Push Notifications
+            </MDTypography>
           </Grid>
         </Grid>
       </MDBox>
