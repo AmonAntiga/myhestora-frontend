@@ -17,13 +17,13 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // Dashboard Layout Sections
-import SidenavCollapse from "layouts/sections/Sidenav/SidenavCollapse";
-import SidenavList from "layouts/sections/Sidenav/SidenavList";
-import SidenavItem from "layouts/sections/Sidenav/SidenavItem";
+import SidenavCollapse from "layouts/dashboard/sections/Sidenav/SidenavCollapse";
+import SidenavList from "layouts/dashboard/sections/Sidenav/SidenavList";
+import SidenavItem from "layouts/dashboard/sections/Sidenav/SidenavItem";
 
 // Custom styles for the Sidenav
-import SidenavRoot from "layouts/sections/Sidenav/SidenavRoot";
-import sidenavLogoLabel from "layouts/sections/Sidenav/styles/sidenav";
+import SidenavRoot from "layouts/dashboard/sections/Sidenav/SidenavRoot";
+import sidenavLogoLabel from "layouts/dashboard/sections/Sidenav/styles/sidenav";
 
 // Dashboard Context
 import {

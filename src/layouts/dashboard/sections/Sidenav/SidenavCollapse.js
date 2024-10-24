@@ -33,7 +33,7 @@ import {
   collapseIcon,
   collapseText,
   collapseArrow,
-} from "layouts/sections/Sidenav/styles/sidenavCollapse";
+} from "layouts/dashboard/sections/Sidenav/styles/sidenavCollapse";
 
 // Material Dashboard 2 PRO React context
 import { useMaterialUIController } from "context";

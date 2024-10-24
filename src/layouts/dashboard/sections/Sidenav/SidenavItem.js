@@ -26,7 +26,11 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 
 // Custom styles for the SidenavItem
-import { item, itemContent, itemArrow } from "layouts/sections/Sidenav/styles/sidenavItem";
+import {
+  item,
+  itemContent,
+  itemArrow,
+} from "layouts/dashboard/sections/Sidenav/styles/sidenavItem";
 
 // Material Dashboard 2 PRO React contexts
 import { useMaterialUIController } from "context";

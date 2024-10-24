@@ -20,7 +20,7 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
 // Custom styles for the Configurator
-import ConfiguratorRoot from "layouts/sections/Configurator/ConfiguratorRoot";
+import ConfiguratorRoot from "layouts/dashboard/sections/Configurator/ConfiguratorRoot";
 
 // Material Dashboard 2 PRO React context
 import {

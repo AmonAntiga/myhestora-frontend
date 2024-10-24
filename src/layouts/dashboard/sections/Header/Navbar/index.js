@@ -19,8 +19,8 @@ import MDInput from "components/MDInput";
 import MDBadge from "components/MDBadge";
 
 // Material Dashboard 2 PRO React examples
-import Breadcrumbs from "layouts/sections/Header/Breadcrumbs";
-import NotificationItem from "layouts/sections/Header/Items/NotificationItem";
+import Breadcrumbs from "layouts/dashboard/sections/Header/Breadcrumbs";
+import NotificationItem from "layouts/dashboard/sections/Header/Items/NotificationItem";
 
 // Custom styles for DashboardNavbar
 import {
@@ -30,7 +30,7 @@ import {
   navbarIconButton,
   navbarDesktopMenu,
   navbarMobileMenu,
-} from "layouts/sections/Header/Navbar/styles";
+} from "layouts/dashboard/sections/Header/Navbar/styles";
 
 // Material Dashboard 2 PRO React context
 import {

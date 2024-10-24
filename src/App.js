@@ -15,8 +15,8 @@ import MDBox from "components/MDBox";
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Dashboard Layout Sections
-import Sidenav from "layouts/sections/Sidenav";
-import Configurator from "layouts/sections/Configurator";
+import Sidenav from "layouts/dashboard/sections/Sidenav";
+import Configurator from "layouts/dashboard/sections/Configurator";
 
 // Dashboard themes
 import theme from "assets/theme";

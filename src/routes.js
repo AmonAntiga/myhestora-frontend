@@ -21,8 +21,8 @@
 */
 
 // Material Dashboard 2 PRO React layouts
-import Dashboard from "layouts/pages/Dashboard";
-import Login from "layouts/pages/Login";
+import Dashboard from "layouts/dashboard/pages/Dashboard";
+import Login from "layouts/auth/pages/Login";
 
 // Dashboard components
 import MDAvatar from "components/MDAvatar";

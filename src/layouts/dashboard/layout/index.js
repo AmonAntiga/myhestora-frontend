@@ -10,8 +10,8 @@ import PropTypes from "prop-types";
 import MDBox from "components/MDBox";
 
 // Dashboard Layout Sections
-import Header from "layouts/sections/Header";
-import Footer from "layouts/sections/Footer";
+import Header from "layouts/dashboard/sections/Header";
+import Footer from "layouts/dashboard/sections/Footer";
 
 // Material Dashboard 2 PRO React context
 import { useMaterialUIController, setLayout } from "context";

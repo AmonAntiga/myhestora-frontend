@@ -27,7 +27,7 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // custom styles for the NotificationItem
-import menuItem from "layouts/sections/Header/Items/NotificationItem/styles";
+import menuItem from "layouts/dashboard/sections/Header/Items/NotificationItem/styles";
 
 const NotificationItem = forwardRef(({ icon, title, ...rest }, ref) => (
   <MenuItem {...rest} ref={ref} sx={(theme) => menuItem(theme)}>
