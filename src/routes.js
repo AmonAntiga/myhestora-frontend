@@ -23,6 +23,7 @@
 // Material Dashboard 2 PRO React layouts
 import Dashboard from "layouts/dashboard/pages/Dashboard";
 import Login from "layouts/auth/pages/Login";
+import Register from "layouts/auth/pages/Register";
 import ResetPassword from "layouts/auth/pages/ResetPassword";
 
 // Dashboard components
@@ -238,7 +239,7 @@ const routes = [
         name: "Register",
         key: "register",
         route: "/register",
-        component: "",
+        component: <Register />,
       },
       {
         name: "Reset Password",
